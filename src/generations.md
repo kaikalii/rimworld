@@ -1,4 +1,7 @@
-This short guide contains everything you need to know to make multi-generational colonies in RimWorld's Biotech expansion.
+In Rimworld's Biotech expansion, you can make cool custom genomes for your colonists. 
+However, getting those genes to propogate correctly to future generations can be complicated.
+
+This short guide contains everything you need to know to make multi-generational colonies with a persistent custom xenotype.
 
 It covers the basics of pawn reproduction, gene inheritance, xenotype propogation, and inbreeding avoidance.
 
@@ -96,3 +99,5 @@ Make sure that there are an equal number of starting men and women too!
 | Cousins                    | 20%             | 4                       |
 | Second cousins             | 10%             | 8                       |
 | Third cousins              | ?               | 16                      |
+
+If you want to have a multi-generation colony in a timely manner, I would also recommend increasing child and adult aging rates in the storyteller settings.
