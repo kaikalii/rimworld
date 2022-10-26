@@ -1,0 +1,256 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Colonist Reproduction and Multi-generational Colonies - Kaikalii&#x27;s Rimworld Stuff</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="generations.html" class="active"><strong aria-hidden="true">1.</strong> Colonist Reproduction and Multi-generational Colonies</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Kaikalii&#x27;s Rimworld Stuff</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <p>This short guide contains everything you need to know to make multi-generational colonies in RimWorld's Biotech expansion.</p>
+<p>It covers the basics of pawn reproduction, gene inheritance, xenotype propogation, and inbreeding avoidance.</p>
+<h1 id="colonist-reproduction"><a class="header" href="#colonist-reproduction">Colonist Reproduction</a></h1>
+<p>There are two primary ways colonists can reproduce:</p>
+<p><strong>Lovin'</strong> between two fertile pawns with opposite sexes may result in pregnancy.
+Pregnancy last 18 days.</p>
+<p><strong>IVF</strong> is a procedure that requires research. 
+It involves removing a female colonist's ovum via a surgury and having a male colonist fertilize it.
+Once fertilized, one of three things can be done with the embryo:</p>
+<ul>
+<li>It can be implanted back into the mother</li>
+<li>It can be implanted into a surrogate mother</li>
+<li>It can be placed in a Growth vat</li>
+</ul>
+<h2 id="growth-vats"><a class="header" href="#growth-vats">Growth vats</a></h2>
+<p>Embryos placed in a Growth vat take 9 days and adequate nutrition to produce a baby.</p>
+<p>Any pawn below the age of 18 can be placed in a growth vat to age more quickly,
+but growing a child in a vat prevents you from being able to choose their traits and passions.</p>
+<h1 id="gene-inheritance"><a class="header" href="#gene-inheritance">Gene Inheritance</a></h1>
+<p>Gene inheritance is somewhat complicated.</p>
+<p>First, only germline genes can be inherited.
+Germline genes are present in the following base xenotypes:</p>
+<ul>
+<li>Dirtmole</li>
+<li>Neanderthal</li>
+<li>Pigskin</li>
+<li>Impid</li>
+<li>Waster</li>
+<li>Yttakin</li>
+</ul>
+<p>The rest of the base xenotypes only have xenogenes, which cannot be passed on to children.</p>
+<p>Custom xenotypes can be made inheritable by checking &quot;Genes are heritable&quot; at the bottom of the xenotype editor.
+For the rest of this section &quot;genes&quot; will refer only to germline genes.</p>
+<p>When combining two pawns' genes, there are two modes.
+Which one is used depends on how similar their genomes are.</p>
+<p><strong>If any genes other than baseline hair and skin color are different</strong>, then each gene of each parent has a roughly 50% chance of being passed on to the child genome. The resulting child's xenotype will be baseliner.</p>
+<p><strong>If both genomes have all the same genes other than baseline hair and skin color</strong>, then the resulting combined genome will have all the same non-color genes as the parents, and the color genes will be combined according to the first mode. If the parent xenotypes have different names, then the name of the mother's xenotype will be used.</p>
+<h1 id="inbreeding"><a class="header" href="#inbreeding">Inbreeding</a></h1>
+<p>Pawns will never (and cannot be persuaded) to romance anyone with whom they have a blood relation.</p>
+<p>While IVF can still be used on blood-related pawns, it can cause the resulting child to have <em>Inbred</em> as a germline gene.
+<em>Inbred</em> forces the <em>Slow Learner</em> trait and adds Fertility x50% and Immunity gain speed x85%.</p>
+<p>Because it is a germline gene that can be passed on the subsequent children, it should go without saying that inbreeding is to be avoided.</p>
+<p>The chance of inbreeding occuring is dependent on how close the blood relation is:</p>
+<div class="table-wrapper"><table><thead><tr><th>Relationship</th><th><em>Inbred</em> chance</th></tr></thead><tbody>
+<tr><td>Parent/Child</td><td>80%</td></tr>
+<tr><td>Sibling</td><td>80%</td></tr>
+<tr><td>Grand parent/child</td><td>40%</td></tr>
+<tr><td>Aunt/Uncle/Niece/Nephew</td><td>40%</td></tr>
+<tr><td>Cousin</td><td>20%</td></tr>
+<tr><td>Great grand parent/child</td><td>10%</td></tr>
+<tr><td>Grand aunt/uncle/niece/nephew</td><td>10%</td></tr>
+<tr><td>Cousin once removed</td><td>10%</td></tr>
+<tr><td>Second cousin</td><td>10%</td></tr>
+</tbody></table>
+</div>
+<p>I have not tested the chances for more distant pawn relations, so I am unsure if they are ever considered distant enough for romance.
+Going through the steps to create 2 pawns that were second cousins for testing was an ordeal in itself, even with dev mode.</p>
+<h1 id="multi-generational-colonies"><a class="header" href="#multi-generational-colonies">Multi-generational colonies</a></h1>
+<p>A multi-generation colony is easy when you don't care about xenotypes. Simply allow starting pawns to reproduce with joining pawns.</p>
+<p>If you want to preserve one of the six base germline xenotypes listed above, then simply promote reproduction between starting pawns and joining pawns <em>of that xenotype</em>. i.e. If you want to have multiple generations of Impids, then promote Impid reproduction.</p>
+<p>However, if the xenotype you want to preserve is a custom one, then things get more complicated.
+The only pawns you will ever see with a custom inheritable xenotype are your starting pawns.
+This means that you will have to closely monitor relationships and carefuly plan IVF rounds in order to keep it going without losing genes.</p>
+<p>The Lost Tribe start has the most starting pawns of any default scenario, and even with the 5 it gives you, eventually encountering a 20% chance of the <em>Inbred</em> gene is unnavoidable.</p>
+<p>I recommend using a custom scenario.
+The number of required starting pawns increases exponentially with the desired maximum genetic difference of future generations.
+Make sure that there are an equal number of starting men and women too!</p>
+<div class="table-wrapper"><table><thead><tr><th>Maximum genetic difference</th><th><em>Inbred</em> chance</th><th>Starting pawns required</th></tr></thead><tbody>
+<tr><td>Siblings</td><td>80%</td><td>2</td></tr>
+<tr><td>Cousins</td><td>20%</td><td>4</td></tr>
+<tr><td>Second cousins</td><td>10%</td><td>8</td></tr>
+<tr><td>Third cousins</td><td>?</td><td>16</td></tr>
+</tbody></table>
+</div>
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </body>
+</html>

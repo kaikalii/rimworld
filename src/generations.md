@@ -1,4 +1,4 @@
-This short document contains everything you need to know to make multi-generational colonies in RimWorld's Biotech expansion.
+This short guide contains everything you need to know to make multi-generational colonies in RimWorld's Biotech expansion.
 
 It covers the basics of pawn reproduction, gene inheritance, xenotype propogation, and inbreeding avoidance.
 
@@ -54,7 +54,10 @@ Pawns will never (and cannot be persuaded) to romance anyone with whom they have
 
 While IVF can still be used on blood-related pawns, it can cause the resulting child to have *Inbred* as a germline gene.
 *Inbred* forces the *Slow Learner* trait and adds Fertility x50% and Immunity gain speed x85%.
-The chance of this occuring is dependent on how close the blood relation is:
+
+Because it is a germline gene that can be passed on the subsequent children, it should go without saying that inbreeding is to be avoided.
+
+The chance of inbreeding occuring is dependent on how close the blood relation is:
 
 | Relationship                  | *Inbred* chance |
 | ----------------------------- | --------------- |
@@ -78,13 +81,13 @@ A multi-generation colony is easy when you don't care about xenotypes. Simply al
 If you want to preserve one of the six base germline xenotypes listed above, then simply promote reproduction between starting pawns and joining pawns *of that xenotype*. i.e. If you want to have multiple generations of Impids, then promote Impid reproduction.
 
 However, if the xenotype you want to preserve is a custom one, then things get more complicated.
-The only pawns you will ever see with a custom xenotype are your starting pawns.
-This means that you will have to closely monitor relationships and carefuly plan IVF rounds.
+The only pawns you will ever see with a custom inheritable xenotype are your starting pawns.
+This means that you will have to closely monitor relationships and carefuly plan IVF rounds in order to keep it going without losing genes.
 
 The Lost Tribe start has the most starting pawns of any default scenario, and even with the 5 it gives you, eventually encountering a 20% chance of the *Inbred* gene is unnavoidable.
 
-I recommend using a custom scenario. 
-The number of required starting pawns increases exponentially with the desired maximum genetic difference.
+I recommend using a custom scenario.
+The number of required starting pawns increases exponentially with the desired maximum genetic difference of future generations.
 Make sure that there are an equal number of starting men and women too!
 
 | Maximum genetic difference | *Inbred* chance | Starting pawns required |
